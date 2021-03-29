@@ -1,0 +1,55 @@
+body{
+    font-family: 'open sans',sans-serif;
+    background-color: grey;
+}
+
+
+.menuBtn {
+    background-color: lightblue;
+    font-weight: bold;
+    width: calc(90% / 3);
+    margin: 10px;
+    font-size: 20px; 
+}
+
+.menuToolBar {
+    align-items: center;
+    margin: auto;
+    width: calc(100%/2);
+    background-color: silver;
+}
+
+.personInfo {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px all;
+    margin: 30px auto;
+    font-size: 30px;
+    background-color: cyan;
+    width: 75%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 750px;
+}
+
+table, th, td {
+    margin: auto;
+    font-size: 25px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+.informationAnchor {
+    font-size: 20px;
+    width: 125px;
+    margin: auto;
+    padding: 30px;
+}
