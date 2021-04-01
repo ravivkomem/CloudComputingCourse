@@ -1,3 +1,5 @@
+
+
 const liorInfo = 
 {
     name: 'Lior Kauffman',
@@ -12,6 +14,7 @@ const liorInfo =
         {courseName: 'History', courseCredit: '2'}
     ]
 }
+
 
 const ravivInfo =
 {
