@@ -12,11 +12,12 @@ import Contact from './Components/Contact';
 import Payment from './Components/Payment';
 import ErrorPage from './Components/ErrorPage';
 /* Components */
-import HeaderSection from './Components/HeaderSection'
+import HeaderSection from './Components/HeaderSection';
+import funcClick from './Components/FuncClick';
 /* Styles */
 import './App.css';
 /* Images */
-import backgroundImg from './Images/background.jpg'
+import backgroundImg from './Images/background2.jpg'
 
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
@@ -32,7 +33,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <HeaderSection></HeaderSection>
+        <HeaderSection/>
+       
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />
