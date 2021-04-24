@@ -2,8 +2,8 @@
 /* #         I M P O R T S                   # */
 /* ########################################### */
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+
 /* Website Pages */
 import About from './Components/About';
 import Home from './Components/Home';
@@ -11,7 +11,10 @@ import Shop from './Components/Shop';
 import Contact from './Components/Contact';
 import Payment from './Components/Payment';
 import ErrorPage from './Components/ErrorPage';
-
+/* Components */
+import HeaderSection from './Components/HeaderSection'
+/* Styles */
+import './App.css';
 /* Images */
 import backgroundImg from './Images/background.jpg'
 
@@ -28,7 +31,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
+        <HeaderSection></HeaderSection>
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />
@@ -37,7 +41,7 @@ class App extends React.Component {
           <Route path="/contact" component={Contact} />
           <Route component={ErrorPage} />
         </Switch>
-      </div>
+      </>
     );
   }
 
