@@ -2,16 +2,11 @@
 /* #         I M P O R T S                   # */
 /* ########################################### */
 import React from 'react';
-import SingleCar from './SingleCar';
-//import './Shop.css';
-
-/* Images */
-import MaseratiLevanteImg from '../Images/Cars/MaseratiLevante.jpg'
 
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
 /* ########################################### */
-class Shop extends React.Component {
+class FooterSection extends React.Component {
 
   constructor(props) 
   {
@@ -21,14 +16,11 @@ class Shop extends React.Component {
 
   render() {
     return (
-      <>
-        <h1>Shop</h1>
-        <SingleCar id={1} name="Maserati Levante" price={300} img={MaseratiLevanteImg} ></SingleCar>
-      </>
+        <center>Created By: Raviv Komem & Lior Kauffman 2021</center>
     );
   }
 
 
 }
 
-export default Shop;
+export default FooterSection;
