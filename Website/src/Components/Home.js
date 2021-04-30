@@ -3,7 +3,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Section from './../HOC/Sec';
-import bgImage from './../HOC/background.jpg';
+import bgImage from './../HOC/backGround3.jpg';
 
 
 
