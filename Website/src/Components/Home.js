@@ -1,38 +1,53 @@
-/* ########################################### */
-/* #         I M P O R T S                   # */
-/* ########################################### */
+
+  
 import React from 'react';
-import Card from "react-bootstrap/Card";
-//import './Home.css';
+import {Link} from 'react-router-dom';
+import Section from './../HOC/Sec';
+import bgImage from './../HOC/background.jpg';
 
-/* ########################################### */
-/* #  C L A S S   D E F I N I T I O N        # */
-/* ########################################### */
-class Home extends React.Component {
 
-  constructor(props) 
-  {
-    super(props);
-    sessionStorage.clear();
-  }
 
-  render() {
-    return (
+const home = () => {
+  return (
+    <Section id='home'>
       <div>
-          <center>
-            <Card style={{width: '40rem' , marginTop: '3rem', background: 'rgba(252, 252, 252, 0.6)'}}>
-              <Card.Body>
-                <Card.Text >
-                  <h1><b>Welcome to Car4U</b></h1>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </center>
+        <div
+          className='home-content p-5'
+          style={{ backgroundImage: `url(${bgImage})` }}
+          
+        >
+          <div className='intro container text-center text-light'>
+            <h1 className='title'>WELCOME</h1>
+            <h2 className='sub-title mb-4'>
+             Car4U - You Are Going To Love It
+            </h2>
+            <Link to={'/About'}>
+                 <button style={{height: 40,
+                    width:160,
+                    borderRadius:10,
+                    fontFamily: 'Helvetica',
+                    backgroundColor : "white",
+                    color: "black",
+                    marginLeft :50,
+                    marginRight:50,
+                    marginTop :20}} > Learn More </button>
+            </Link>
+            <Link to={'/Contact'}>
+                 <button style={{height: 40,
+                    width:160,
+                    borderRadius:10,
+                    fontFamily: 'Helvetica',
+                    backgroundColor: "white",
+                    color: "black",
+                    marginLeft :50,
+                    marginRight:50,
+                    marginTop :20}}> Contact us </button>
+            </Link>
+          </div>
         </div>
-    );
-  }
+      </div>
+    </Section>
+  );
+};
 
-
-}
-
-export default Home;
+export default home;

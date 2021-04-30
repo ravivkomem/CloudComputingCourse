@@ -8,6 +8,7 @@
 
 body {
   background-color: rgb(248, 246, 253);
+  
 }
 
 body,
@@ -17,6 +18,13 @@ button {
   font-family: "Inter", sans-serif;
   
 }
+input,
+textarea {
+  width: 250px;
+  text-align: left;
+  border-left-width: thin;
+}
+
 
 .app {
   width: 400px;
@@ -31,7 +39,9 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+margin-left:650px;
+text-align: left;
+  
   
 }
 
@@ -92,13 +102,40 @@ textarea:focus {
 
 .form > button:hover {
   background-color: rgb(0, 0, 196);
-  
+   
 }
-.input{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-width: 1;
+input{
+ 
+  size: 5px;
+box-sizing:content-box;
+ text-align: left;
+ align-items: flex-start;
+ cursor: default;
+ 
  
 }
+button {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: buttonface;
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 11px system-ui;
+  padding: 1px 7px 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-image: initial;
+}
+
