@@ -30,8 +30,8 @@ class HeaderSection extends React.Component {
             <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/shop">Shop</Nav.Link>
-                <Nav.Link>Hot & New</Nav.Link> {/* TODO:  Add actual link?*/}
-                <Nav.Link>Insurance</Nav.Link> {/* TODO:  Add actual link?*/}
+                <Nav.Link href="/HotAndNew">Hot & New</Nav.Link> 
+                <Nav.Link href="/Insurance">Insurance</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
             </Nav>

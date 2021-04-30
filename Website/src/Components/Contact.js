@@ -5,7 +5,6 @@ import React from 'react';
 import '../App.css';
 //import './Home.css';
 import form from "react-bootstrap/Form";
-import funcClick from '../Components/FuncClick';
 
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
