@@ -2,11 +2,13 @@
 /* #         I M P O R T S                   # */
 /* ########################################### */
 import React from 'react';
+import {carsData} from '../Data/CarsData';
 import SingleCar from './SingleCar';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
 //import './Shop.css';
 
-/* Images */
-import MaseratiLevanteImg from '../Images/Cars/MaseratiLevante.jpg'
 
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
@@ -17,14 +19,22 @@ class Shop extends React.Component {
   {
     super(props);
     sessionStorage.clear();
+
   }
 
   render() {
     return (
-      <>
-        <h1>Shop</h1>
-        <SingleCar id={1} name="Maserati Levante" price={300} img={MaseratiLevanteImg} ></SingleCar>
-      </>
+      <center>
+        <Container>
+          <Row>
+          {
+            carsData.map((value, key) => {
+              return <Col><SingleCar id={value.id} name={value.name} price={value.price} img={value.img} /></Col>
+            })
+          }
+          </Row>
+        </Container>
+      </center>
     );
   }
 

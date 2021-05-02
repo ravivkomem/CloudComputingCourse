@@ -55,13 +55,13 @@ class SingleCar extends React.Component {
         }
 
         return (
-            <Card style={{width: '25rem' , marginTop: '3rem', background: 'rgba(252, 252, 252, 0.6)'}}>
+            <Card style={{width: '20rem' , marginTop: '3rem', background: 'rgba(252, 252, 252, 0.6)'}}>
               <Card.Body>
                 <Card.Text>
-                    <img style={{display: "block", margin: "0 auto 10px", maxHeight: "200px"}} className="img-fluid" 
+                    <img style={{display: "block", margin: "0 auto 10px", maxHeight: "150px"}} className="img-fluid" 
                     src={this.img + '?v=' + this.id} alt=""/>
                     <p className="text-center">{this.name}</p>
-                    <h3 className="text-center">{this.price}</h3>
+                    <h3 className="text-center">{this.price} $</h3>
                     <div className="text-right">
                         <Link className="btn btn-link btn-sm mr-2">Details</Link> {/* TODO - Set details? */}
                         {button}
