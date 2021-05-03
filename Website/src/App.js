@@ -10,11 +10,12 @@ import Home from './Components/Home';
 import Shop from './Components/Shop';
 import Contact from './Components/Contact';
 import Payment from './Components/Payment';
-import Insurance from './Components/Insurance'
-import HotAndNew from './Components/HotAndNew'
+import Insurance from './Components/Insurance';
+import HotAndNew from './Components/HotAndNew';
+import CheckoutForm from './Components/CheckoutForm';
 import ErrorPage from './Components/ErrorPage';
 /* Components */
-import HeaderSection from './Components/HeaderSection'
+import HeaderSection from './Components/HeaderSection';
 import FooterSection from './Components/FooterSection';
 /* Styles */
 import './App.css';
@@ -42,6 +43,7 @@ class App extends React.Component {
           <Route path="/contact" component={Contact} />
           <Route path="/Insurance" component={Insurance} />
           <Route path="/HotAndNew" component={HotAndNew} />
+          <Route path="/checkout" component={CheckoutForm} />
           <Route component={ErrorPage} />
         </Switch>
         <FooterSection/>

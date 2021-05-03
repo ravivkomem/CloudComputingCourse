@@ -51,7 +51,7 @@ class SingleCar extends React.Component {
         }
         else
         {
-            button = <Button className="btn btn-primary btn-sm">Add to cart</Button>
+            button = <Link to="/checkout" className="btn btn-primary btn-sm">Purchase</Link>
         }
 
         return (
