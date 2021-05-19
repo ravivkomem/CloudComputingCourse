@@ -3,9 +3,15 @@
 /* ########################################### */
 import React from 'react';
 import { Form } from 'react-bootstrap';
+
 //import './Home.css';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
+import Calendar from 'react-calendar'
+import { DateRangePicker } from 'react-dates';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+//import datepicker from './DatePicker'
 
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
@@ -16,6 +22,10 @@ class Insurance extends React.Component {
   {
     super(props);
     sessionStorage.clear();
+    this.state={
+      startDate : null,
+      endDate : null
+    }
   }
 
   render() {
@@ -58,10 +68,20 @@ class Insurance extends React.Component {
     <div key={`inline-${type}`} className="mb-3">
       <Form.Check inline label="Insurance" name="group1" type={type} id={`inline-${type}-1`} />
       <Form.Check inline label="Comprehensive insurance" name="group1" type={type} id={`inline-${type}-2`} />
-      <Form.Check inline label="Third party insurance" name="group1" type={type} id={`inline-${type}-3`}/>
+      <Form.Check inline label="Third party insurance " name="group1" type={type} id={`inline-${type}-3`}/>
     </div>
   ))}
-  
+  <h6>Duration of insurance</h6>
+  <DateRangePicker
+  startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+  startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+  endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+  endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+  onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+  focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+  onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+/>
+
         </Form>
         
       
