@@ -11,17 +11,20 @@ import Calendar from 'react-calendar'
 import { DateRangePicker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
+
 //import datepicker from './DatePicker'
 
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
 /* ########################################### */
+
 class Insurance extends React.Component {
 
   constructor(props) 
   {
     super(props);
     sessionStorage.clear();
+  
     this.state={
       startDate : null,
       endDate : null
@@ -30,8 +33,11 @@ class Insurance extends React.Component {
 
   render() {
     return (
+      
+     <div className = "insurance">
         <div className = "InsuranceTitle"> 
         <h1>Car insurance</h1>
+       
      <div className = "checkbox">
      
         
@@ -63,15 +69,27 @@ class Insurance extends React.Component {
 
          </Form.Group>
          </Col>
-         </Row>
-         {['checkbox', 'radio'].map((type) => (
-    <div key={`inline-${type}`} className="mb-3">
+         <Col>
+         
+<div class = "Radio">
+         <h5>Kind of Insurance</h5>
+         {['checkbox'].map((type) => (
+    <div key={`inline-${type}`} >
       <Form.Check inline label="Insurance" name="group1" type={type} id={`inline-${type}-1`} />
       <Form.Check inline label="Comprehensive insurance" name="group1" type={type} id={`inline-${type}-2`} />
       <Form.Check inline label="Third party insurance " name="group1" type={type} id={`inline-${type}-3`}/>
+      
     </div>
   ))}
-  <h6>Duration of insurance</h6>
+  
+  
+  
+  </div>
+  </Col>
+         <Col>
+         <div className = "Date">
+         <h6>Duration of insurance</h6>
+        
   <DateRangePicker
   startDate={this.state.startDate} // momentPropTypes.momentObj or null,
   startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
@@ -81,10 +99,35 @@ class Insurance extends React.Component {
   focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
   onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
 />
+</div>
 
+</Col>
+
+  </Row>
+  
+<div className = "Pricetext">
+<Form.Group as={Row} controlId="formPlaintextPrice">
+    <Form.Label column sm="5">
+      Price
+    </Form.Label>
+    <Col sm="10">
+      <Form.Control size = "sm" type="Price" placeholder="Price" />
+    </Col>
+  </Form.Group>
+  </div>
         </Form>
         
       
+     </div>
+     <button style={{height: 40,
+                    width:160,
+                    borderRadius:10,
+                    fontFamily: 'Helvetica',
+                    backgroundColor : "white",
+                    color: "black",
+                    marginLeft :50,
+                    marginRight:50,
+                    marginTop :20}} > Purchse </button>
      </div>
      </div>
      

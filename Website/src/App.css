@@ -145,9 +145,21 @@ button {
   width: 600px;
 }
 .checkbox{
-  width: 450px;
+  width: 500px;
   margin-left: 20px;
 }
-.mb-3{
+.Pricetext{
+width: 130px;
 
+}
+.Date{
+margin-right: 200px;
+}
+.Radio{
+  width: 500px;
+ 
+  
+}
+.insurance{
+ 
 }

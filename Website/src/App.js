@@ -20,10 +20,13 @@ import FooterSection from './Components/FooterSection';
 /* Styles */
 import './App.css';
 /* Images */
-
+import background from '../src/Images/Cars/back.jpg'
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
 /* ########################################### */
+var sectionStyle = {
+  backgroundImage: `url(${background})`
+}
 class App extends React.Component {
 
   constructor(props) 
@@ -34,8 +37,13 @@ class App extends React.Component {
 
   render() {
     return (
+      <div style = {sectionStyle}>
       <>
-        <HeaderSection></HeaderSection>        <Switch>
+      
+        <HeaderSection></HeaderSection>     
+       
+        
+           <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />
           <Route path="/shop" component={Shop} />
@@ -47,7 +55,9 @@ class App extends React.Component {
           <Route component={ErrorPage} />
         </Switch>
         <FooterSection/>
+        
       </>
+      </div>
     );
   }
 

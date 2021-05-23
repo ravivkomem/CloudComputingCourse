@@ -24,7 +24,7 @@ class HeaderSection extends React.Component {
 
   render() {
     return (
-      
+    
         <Navbar bg="primary" variant="dark">
             <Navbar.Brand href="/">
                 <img src={LogoImg} style={{width: "6rem"}}></img>
@@ -42,6 +42,7 @@ class HeaderSection extends React.Component {
                 <Button variant="outline-light">Search</Button>
             </Form>
         </Navbar>
+        
         
     );
   }
