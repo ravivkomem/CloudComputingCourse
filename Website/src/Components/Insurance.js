@@ -11,6 +11,8 @@ import Calendar from 'react-calendar'
 import { DateRangePicker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
+import Button from "react-bootstrap/Button";
+
 
 //import datepicker from './DatePicker'
 
@@ -29,6 +31,7 @@ class Insurance extends React.Component {
       startDate : null,
       endDate : null
     }
+   
   }
 
   render() {
@@ -72,7 +75,7 @@ class Insurance extends React.Component {
          <Col>
          
 <div class = "Radio">
-         <h5>Kind of Insurance</h5>
+         <h6>Kind of Insurance</h6>
          {['checkbox'].map((type) => (
     <div key={`inline-${type}`} >
       <Form.Check inline label="Insurance" name="group1" type={type} id={`inline-${type}-1`} />
@@ -119,18 +122,12 @@ class Insurance extends React.Component {
         
       
      </div>
-     <button style={{height: 40,
-                    width:160,
-                    borderRadius:10,
-                    fontFamily: 'Helvetica',
-                    backgroundColor : "white",
-                    color: "black",
-                    marginLeft :50,
-                    marginRight:50,
-                    marginTop :20}} > Purchse </button>
-     </div>
-     </div>
+      <div className = "Button">
+     <Button variant="light">Purchse</Button> 
+     </div> 
      
+     </div>
+     </div>
     );
   }
 
