@@ -30,6 +30,9 @@ class CheckoutForm extends React.Component {
                         <CheckoutFormPayment />
                         {/* <Billing /> */}
                     </Col>
+                    <Col>
+                        blablablbalalala
+                    </Col>
                     {/* <Col className="right-col-container pb-4" md="6">
                         <CartDetails data={this.state.data} />
                         <InfoReel />
