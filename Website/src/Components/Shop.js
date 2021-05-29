@@ -29,7 +29,10 @@ class Shop extends React.Component {
           <Row>
           {
             carsData.map((value, key) => {
-              return <Col><SingleCar id={value.id} name={value.name} price={value.price} img={value.img} /></Col>
+              return (
+              <Col key={value.id}><SingleCar id={value.id} name={value.name} price={value.price} 
+              img={value.img} engine={value.engine} maxSpeed={value.maxSpeed}/></Col>
+              );
             })
           }
           </Row>

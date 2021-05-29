@@ -10,6 +10,8 @@ export const carsData = [
         id: 1,
         name: "Maserati Levante",
         price: 83385,
+        engine: "1000HP",
+        maxSpeed: "100KM/H",
         img: MaseratiLevanteImg,
     },
     {
