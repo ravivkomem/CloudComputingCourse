@@ -20,7 +20,7 @@ import FooterSection from './Components/FooterSection';
 /* Styles */
 import './App.css';
 /* Images */
-import background from '../src/Images/Cars/back.jpg'
+import background from '../src/Images/Cars/back2.jpg'
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
 /* ########################################### */
