@@ -3,6 +3,7 @@
 /* ########################################### */
 import React from 'react';
 import { Form } from 'react-bootstrap';
+import {carsData} from '../Data/CarsData';
 
 //import './Home.css';
 import Col from 'react-bootstrap/Col'
@@ -26,12 +27,23 @@ class Insurance extends React.Component {
   {
     super(props);
     sessionStorage.clear();
-  
+    this.currentPrice = 0;
+
     this.state={
       startDate : null,
       endDate : null
     }
-   
+    
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange = (e) => {
+    console.log("Option Selected!!");
+    
+    this.currentPrice = e.target.value;
+    console.log("Price is: " + this.currentPrice)
+    this.forceUpdate();
+    // this.setState({ price: e.target.value });
   }
 
   render() {
@@ -47,16 +59,23 @@ class Insurance extends React.Component {
          <Form>
         <Row>
           <Col>
-         <Form.Group controlId="exampleForm.SelectCustom">
-         <Form.Label>Select your car</Form.Label>
-         <Form.Control as="select" custom>
-         <option>Maserati Levante</option>
+          <Form.Group controlId="exampleForm.SelectCustom">
+          <Form.Label>Select your car</Form.Label>
+          <Form.Control as="select" custom onChange={this.handleChange}>
+          {
+            carsData.map((car, key) => {
+              return (
+                <option value={car.price}>{car.name}</option>
+              );
+            })
+          }
+         {/* <option>Maserati Levante</option>
          <option>Pagani Huayra Roadster</option>
          <option>Merceds Benz S Class</option>
          <option>Rolls Royce Phantom</option>
          <option>Bugatti Chiron</option>
          <option>Ferrari SF90</option>
-         <option>Tesla Model 3</option>
+         <option>Tesla Model 3</option> */}
          </Form.Control>
 
          </Form.Group>
@@ -114,7 +133,7 @@ class Insurance extends React.Component {
       Price
     </Form.Label>
     <Col sm="10">
-      <Form.Control size = "sm" type="Price" placeholder="Price" />
+      {this.currentPrice}
     </Col>
   </Form.Group>
   </div>
