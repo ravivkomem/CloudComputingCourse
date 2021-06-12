@@ -31,7 +31,7 @@ class CheckoutForm extends React.Component {
                         {/* <Billing /> */}
                     </Col>
                     <Col>
-                        blablablbalalala
+                       
                     </Col>
                     {/* <Col className="right-col-container pb-4" md="6">
                         <CartDetails data={this.state.data} />

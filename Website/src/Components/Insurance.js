@@ -13,6 +13,7 @@ import { DateRangePicker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import Button from "react-bootstrap/Button";
+import {Link} from 'react-router-dom';
 
 
 //import datepicker from './DatePicker'
@@ -28,12 +29,13 @@ class Insurance extends React.Component {
     super(props);
     sessionStorage.clear();
     this.currentPrice = 0;
-
+    
     this.state={
       startDate : null,
       endDate : null
     }
     
+ 
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -133,7 +135,13 @@ class Insurance extends React.Component {
       Price
     </Form.Label>
     <Col sm="10">
-      {this.currentPrice}
+    
+   
+ 
+    {this.currentPrice*0.01*((this.state.endDate-this.state.startDate)/86400000)}
+    
+     
+      
     </Col>
   </Form.Group>
   </div>
@@ -142,7 +150,8 @@ class Insurance extends React.Component {
       
      </div>
       <div className = "Button">
-     <Button variant="light">Purchse</Button> 
+     
+     <Link to="/checkout" className="btn btn-primary btn-sm">Purchase</Link>
      </div> 
      
      </div>
