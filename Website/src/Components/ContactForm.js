@@ -28,19 +28,17 @@ const ContactForm = (props) => {
         const fieldName = e.target.name;
         const fieldValue = e.target.value;
 
-        console.log("Field Name: " + fieldName, fieldValue)
-
         if (fieldName === 'formName')
         {
           name = fieldValue;
         }
         else if (fieldName === 'formEmail')
         {
-            email = fieldValue;
+          email = fieldValue;
         }
         else if (fieldName === 'formMessage')
         {
-            message = fieldValue;
+          message = fieldValue;
         }
     }
 

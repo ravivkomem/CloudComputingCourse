@@ -11,7 +11,6 @@ import Shop from './Components/Shop';
 import Contact from './Components/Contact';
 import Payment from './Components/Payment';
 import Insurance from './Components/Insurance';
-import HotAndNew from './Components/HotAndNew';
 import CheckoutForm from './Components/CheckoutForm';
 import ErrorPage from './Components/ErrorPage';
 /* Components */
@@ -40,18 +39,15 @@ class App extends React.Component {
       <div style = {sectionStyle}>
       <>
       
-        <HeaderSection></HeaderSection>     
-       
-        
-           <Switch>
+        <HeaderSection></HeaderSection>
+        <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />
           <Route path="/shop" component={Shop} />
           <Route path="/payment" component={Payment} />
           <Route path="/contact" component={Contact} />
           <Route path="/Insurance" component={Insurance} />
-          <Route path="/HotAndNew" component={HotAndNew} />
-          <Route path="/checkout" component={CheckoutForm} />
+          <Route path="/checkout/:price/:name" component={CheckoutForm} />
           <Route component={ErrorPage} />
         </Switch>
         <FooterSection/>

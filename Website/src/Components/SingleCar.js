@@ -4,9 +4,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-// import { CartContext } from '../../contexts/CartContext';
-// import { formatNumber } from '../../helpers/utils';
 
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */
@@ -76,7 +73,7 @@ class SingleCar extends React.Component {
                     <h3 className="text-center">{this.props.price} $</h3>
                     <div className="text-right">
                         <Link className="btn btn-link btn-sm mr-2" onClick={this.showDetails}>Details</Link>
-                        <Link to="/checkout" className="btn btn-primary btn-sm">Purchase</Link>
+                        <Link to={"/checkout/"+String(this.props.price)+"/"+String(this.props.name)} className="btn btn-primary btn-sm">Purchase</Link>
                     </div>
                 </Card.Text>
               </Card.Body>

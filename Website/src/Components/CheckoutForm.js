@@ -13,7 +13,7 @@ import Container from 'react-bootstrap/Container'
 /* #  C L A S S   D E F I N I T I O N        # */
 /* ########################################### */
 class CheckoutForm extends React.Component {
-מצ
+
     constructor(props) 
     {
       super(props);
@@ -31,12 +31,10 @@ class CheckoutForm extends React.Component {
                         {/* <Billing /> */}
                     </Col>
                     <Col>
-                        blablablbalalala
+                        <h1>Checkout Summary</h1>
+                        <h2>Item Name: {String(this.props.match.params.name)}</h2>
+                        <h2>Item Price: {String(this.props.match.params.price)}$</h2>
                     </Col>
-                    {/* <Col className="right-col-container pb-4" md="6">
-                        <CartDetails data={this.state.data} />
-                        <InfoReel />
-                    </Col> */}
                 </Row>
             </Container>
 		);

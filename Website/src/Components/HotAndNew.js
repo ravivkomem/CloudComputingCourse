@@ -2,8 +2,6 @@
 /* #         I M P O R T S                   # */
 /* ########################################### */
 import React from 'react';
-//import './Home.css';
-import background from '../HOC/background.jpg'
 
 /* ########################################### */
 /* #  C L A S S   D E F I N I T I O N        # */

@@ -73,7 +73,23 @@ class CheckoutFormPayment extends React.Component {
     }
 
     getPaypalContent () {
-        return <div></div>
+        return  (
+        <div class="box">
+            <span class="paypal-logo">
+                <i>Pay</i><i>Pal</i>
+            </span>
+
+            <br />
+
+            <button class="paypal-button">
+                <span class="paypal-button-title">
+                    Buy now with
+                </span>
+                <span class="paypal-logo">
+                    <i>Pay</i><i>Pal</i>
+                </span>
+            </button>
+        </div>);
     }
 
     getAmazonContent () {
