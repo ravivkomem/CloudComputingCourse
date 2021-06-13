@@ -16,6 +16,7 @@ class About extends React.Component {
     super(props);
     sessionStorage.clear();
   }
+  
   render() {
     return (
     <Layout>

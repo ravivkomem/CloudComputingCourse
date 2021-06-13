@@ -14,13 +14,9 @@ import {useState} from 'react'
 const ContactForm = (props) => {
 
     /* Class Constantants */
-    const initialState = {
-        name: '',
-        email: '',
-        message: '',
-    }
-
-    const [{name, email, message}, setState] = useState(initialState);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
     
     /* Data Fields Event Change Handler */
@@ -30,15 +26,15 @@ const ContactForm = (props) => {
 
         if (fieldName === 'formName')
         {
-          name = fieldValue;
+          setName(fieldValue);
         }
         else if (fieldName === 'formEmail')
         {
-          email = fieldValue;
+          setEmail(fieldValue);
         }
         else if (fieldName === 'formMessage')
         {
-          message = fieldValue;
+          setMessage(fieldValue);
         }
     }
 

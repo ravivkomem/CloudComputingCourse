@@ -72,7 +72,7 @@ class SingleCar extends React.Component {
                     {maxSpeedDetails}
                     <h3 className="text-center">{this.props.price} $</h3>
                     <div className="text-right">
-                        <Link className="btn btn-link btn-sm mr-2" onClick={this.showDetails}>Details</Link>
+                        <Link to='#' className="btn btn-link btn-sm mr-2" onClick={this.showDetails}>Details</Link>
                         <Link to={"/checkout/"+String(this.props.price)+"/"+String(this.props.name)} className="btn btn-primary btn-sm">Purchase</Link>
                     </div>
                 </Card.Text>
